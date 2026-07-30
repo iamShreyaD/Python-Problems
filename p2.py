@@ -71,47 +71,49 @@
 # =========================================
 
 
-input_name = input("Enter your name:")
+
+input_name = input("Enter your name: ")
 name = "Name: " + input_name
 
-input_employeeID = input("Enter your employee ID:")
+input_employeeID = input("Enter your employee ID: ")
 employee_ID = "Employee ID: " + input_employeeID
 
-input_dept = input("Enter your department:")
+input_dept = input("Enter your department: ")
 dept = "Department: " + input_dept
 
-input_age = input("Enter your age:")
+input_age = input("Enter your age: ")
 age = "Age:" + input_age
 
-input_m_basic_salary = int(input("Enter your monthly basic salary:"))
-m_basic_salary = "Monthly Basic Salary: $" + input_m_basic_salary
+input_m_basic_salary = int(input("Enter your monthly basic salary: "))
+m_basic_salary = "Monthly Basic Salary: $" + str(round(input_m_basic_salary, 1))
 
 input_m_bonus = int(input("Enter your monthly bonus: "))
-m_bonus = "Montly Bonus: $" + input_m_bonus
+m_bonus = "Montly Bonus: $" + str(round(input_m_bonus, 1))
 
 my_gross_salary = input_m_basic_salary + input_m_bonus
-gross_salary = "Gross Salary: $" + my_gross_salary
+gross_salary = "Gross Salary: $" + str(round(my_gross_salary, 1))
 
 input_tax_ded = int(input("Enter your tax deductions: "))
-tax_ded = "Tax Deductions: $" + input_tax_ded
+tax_ded = "Tax Deductions: $" + str(round(input_tax_ded, 1))
 
 input_pf_ded = int(input("Enter your provident fund deduction: "))
-pf_ded = "PF Deductions: $" + input_pf_ded
+pf_ded = "PF Deductions: $" + str(round(input_pf_ded, 1))
 
 input_total_ded = input_tax_ded + input_pf_ded
-total_ded = "Total Deductions: $" + input_total_ded
+total_ded = "Total Deductions: $" + str(round(input_total_ded, 1))
 
 input_net_salary = my_gross_salary - input_total_ded
-net_salary = "Net Monthly Salary: $" + input_net_salary
+net_salary = "Net Monthly Salary: $" + str(round(input_net_salary, 1))
 
 input_annual_salary = input_net_salary * 12
-annual_salary = "Annual Salary: $" + input_annual_salary
+my_annual_salary = round(input_annual_salary, 1)
+annual_salary = "Annual Salary: $" + str(my_annual_salary)
 
-input_exp = input("Enter your total experience in years:")
-exp = "Name:" + input_exp
+input_exp = input("Enter your total experience in years: ")
+exp = "Experience: " + input_exp
 
-input_fav_lan = input("Enter your favorite programming language:")
-fav_lan = "Name:" + input_fav_lan
+input_fav_lan = input("Enter your favorite programming language: ")
+fav_lan = "Favorite Language: " + input_fav_lan
 
 print("=========================================")
 print("           EMPLOYEE INFORMATION")
@@ -135,6 +137,10 @@ print(total_ded)
 print()
 print(net_salary)
 print(annual_salary)
+print()
 print("=========================================")
 print("Thank you for using employee salary system")
 print("=========================================")
+
+print()
+print(name + " from " + dept + " has worked for " + exp + " and earns $" + my_annual_salary + " annually.")
