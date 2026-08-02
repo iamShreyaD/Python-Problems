@@ -1,4 +1,4 @@
-Challenge: Student Report Card Analyzer (Difficulty: 8/10)
+Challenge: Student Report Card Analyzer 
 
 A school wants a program that stores information about a student and analyzes the data types of the information entered.
 
