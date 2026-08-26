@@ -8,9 +8,21 @@
 # the index of the key can be found easily from the string.
 
 
-text = "leetcode"
+text = "lleetcode"
 
 def first_unique_character(text):
     frequency = {}
 
-    for i in range(len(text)):
+    for char in text:
+        # character already exists
+        if char in frequency:
+            # increase the count
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+
+    for index, char in enumerate(text):
+        if frequency[char] == 1:
+            return index
+
+print(first_unique_character(text))
