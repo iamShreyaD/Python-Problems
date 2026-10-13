@@ -12,7 +12,6 @@ age = int(input("Enter your age: "))
 n = int(input("Enter a number: "))
 
 age100 = age + 100
-age100 = str(age100)
 
 for i in range(n):
-    print(f"100 years from now, {name} will be {age100} years old.")
+    print(f"100 years from now, {name} will be {str(age100)} years old.")
